@@ -1,0 +1,10 @@
+@import "@scss/colors.scss";
+
+.ErrorMessage {
+    color: $error-color;
+    font-size: 1.5rem;
+    margin: 0.1rem 0rem;
+    text-align: center;
+    padding: 0.4rem;
+    border-radius: 0.25rem;
+}

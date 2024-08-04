@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+@import 'reset-css';
+@import '@scss/colors.scss';
+@import '@scss/fonts.scss';
+@import '@scss/breakpoints.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 0.75rem;
+
+  @include breakpoint(sm) {
+    font-size: 0.65rem;
+  }
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: $primary-font;
+  background-color: $background-color;
+  color: $text-color;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  padding: 2rem 4rem;
+  background-color: $background-color;
+  color: $text-color;
+
+  @include breakpoint(sm) {
+    padding: 1rem 2rem;
+  }
+}
+
+// Links
+a {
+  color: $link-color;
+  text-decoration: none;
+  transition: color 0.3s ease, background-color 0.3s ease;
+
+  &:hover {
+    color: $link-hover-color;
+    background-color: $link-hover-background-color;
+  }
+}
+
+// Headings
+h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+}
+
+h2 {
+  font-size: 2.0rem;
+  font-weight: 700;
+  margin-bottom: 1.4rem;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+
+// Utility Classes
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-xl {
+  font-size: 2.0rem;
+}
+
+.mb-2 {
+  margin-bottom: 1.6rem;
+}
+
+.self-end {
+  align-self: flex-end;
+}

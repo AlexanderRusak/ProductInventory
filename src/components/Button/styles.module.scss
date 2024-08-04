@@ -1,0 +1,39 @@
+@import "@scss/colors.scss";
+@import "@scss/breakpoints.scss";
+
+.button {
+	background-color: $button-background-color;
+	color: $button-text-color;
+	padding: 0.8rem 1.6rem;
+	border: 1px solid transparent;
+	border-radius: 0.4rem;
+	cursor: pointer;
+	transition: background-color 0.3s ease, border-color 0.3s ease;
+
+	&:hover {
+		background-color: $button-hover-color;
+		border-color: $button-hover-color;
+	}
+
+	&:not(:last-child) {
+		margin-right: 1rem;
+
+		@include breakpoint(sm) {
+			margin-right: 0;
+			margin-bottom: 1rem;
+		}
+	}
+
+	&:disabled {
+		background-color: $table-border-color;
+		color: $button-text-color;
+		border-color: $table-border-color;
+		cursor: not-allowed;
+	}
+
+	&:focus {
+		outline: 3px solid $focus-outline-color;
+		outline-offset: 2px;
+		box-shadow: 0 0 0 3px rgba($focus-outline-color, 0.2);
+	}
+}

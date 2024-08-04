@@ -1,0 +1,9 @@
+$breakpoint-sm: 768px;
+
+@mixin breakpoint($breakpoint) {
+  @if $breakpoint =="sm" {
+    @media (max-width: $breakpoint-sm) {
+      @content;
+    }
+  }
+}
